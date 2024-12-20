@@ -14,7 +14,9 @@ class RecordManager {
     init(){
         setupRecorder()
     }
-
+    
+    var voiceComplition: ((Float) -> Void)?
+    
     private func setupRecorder(){
         //1 save
         let audioFileName = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("recording.m4a")
@@ -50,7 +52,7 @@ class RecordManager {
     }
     
     private func startMonitoring(){
-        timer = Timer.scheduledTimer(timeInterval: 0.02, target: self, selector: #selector(updateVolume), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(updateVolume), userInfo: nil, repeats: true)
     }
     
     private func stopMonitoring(){
@@ -62,6 +64,6 @@ class RecordManager {
     private func updateVolume(){
         recorder?.updateMeters()
         let volume = (recorder?.averagePower(forChannel: 0)) ?? 0
-        print(volume)
+        voiceComplition?(volume)
     }
 }

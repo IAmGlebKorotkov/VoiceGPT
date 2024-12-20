@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         $0.frame.size = CGSize(width: 100, height: 100)
         $0.center = view.center
         $0.layer.cornerRadius = 50
-        originScale = $0.transform.scaledBy(x: 1, y: 1)
+        originScale = $0.transform.scaledBy(x: 2, y: 2)
         return $0
     }(UIView())
     
@@ -50,7 +50,13 @@ class ViewController: UIViewController {
         view.addSubview(plusButton)
         view.addSubview(circleView)
         
-
+        recordManager.voiceComplition = { [weak self] volume in
+            guard let self = self else { return }
+            UIView.animate(withDuration: 0.2) {
+                let scaleFactor = CGFloat(0.5 - 1 / (volume / 2))
+                self.circleView.transform = self.originScale.scaledBy(x: scaleFactor, y: scaleFactor)
+            }
+            
+        }
     }
 }
-
