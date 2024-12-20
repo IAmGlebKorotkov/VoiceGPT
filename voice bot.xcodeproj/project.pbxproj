@@ -16,6 +16,7 @@
 		9F8286652D15B62C00C7051D /* voice_botTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8286642D15B62C00C7051D /* voice_botTests.swift */; };
 		9F82866F2D15B62C00C7051D /* voice_botUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82866E2D15B62C00C7051D /* voice_botUITests.swift */; };
 		9F8286712D15B62C00C7051D /* voice_botUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8286702D15B62C00C7051D /* voice_botUITestsLaunchTests.swift */; };
+		9F8286802D15BFFD00C7051D /* RecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82867F2D15BFFD00C7051D /* RecordManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9F82866A2D15B62C00C7051D /* voice botUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "voice botUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F82866E2D15B62C00C7051D /* voice_botUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voice_botUITests.swift; sourceTree = "<group>"; };
 		9F8286702D15B62C00C7051D /* voice_botUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voice_botUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F82867F2D15BFFD00C7051D /* RecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,8 @@
 		9F82864C2D15B62900C7051D /* voice bot */ = {
 			isa = PBXGroup;
 			children = (
+				9F82867E2D15BFCF00C7051D /* RecordManager */,
+				9F82867D2D15BFBA00C7051D /* Controller */,
 				9F82864D2D15B62900C7051D /* AppDelegate.swift */,
 				9F82864F2D15B62900C7051D /* SceneDelegate.swift */,
 				9F8286512D15B62900C7051D /* ViewController.swift */,
@@ -125,6 +129,21 @@
 				9F8286702D15B62C00C7051D /* voice_botUITestsLaunchTests.swift */,
 			);
 			path = "voice botUITests";
+			sourceTree = "<group>";
+		};
+		9F82867D2D15BFBA00C7051D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9F82867E2D15BFCF00C7051D /* RecordManager */ = {
+			isa = PBXGroup;
+			children = (
+				9F82867F2D15BFFD00C7051D /* RecordManager.swift */,
+			);
+			path = RecordManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F8286802D15BFFD00C7051D /* RecordManager.swift in Sources */,
 				9F8286522D15B62900C7051D /* ViewController.swift in Sources */,
 				9F82864E2D15B62900C7051D /* AppDelegate.swift in Sources */,
 				9F8286502D15B62900C7051D /* SceneDelegate.swift in Sources */,
@@ -445,6 +465,7 @@
 				DEVELOPMENT_TEAM = TDMHGP7XAD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "voice bot/Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -473,6 +494,7 @@
 				DEVELOPMENT_TEAM = TDMHGP7XAD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "voice bot/Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
